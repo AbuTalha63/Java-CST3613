@@ -15,7 +15,7 @@ public class GPA {
 	
 	public record Score(float range1, float range2, String letterGrade, float gpa) {}
 	
-	public Score calculateGrade() {
+	public static Score calculateGrade(float score) {
 		
 		return new Score (93, 100, "A", 4.0F);
 		
