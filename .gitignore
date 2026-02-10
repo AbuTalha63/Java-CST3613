@@ -31,3 +31,17 @@ Thumbs.db
 *.jar
 *.war
 *.ear
+
+
+# Maven
+target/
+*.log
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+Thumbs.db
