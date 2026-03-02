@@ -1,5 +1,6 @@
 package edu.cuny.citytech.cst.gpa;
-//Developer: Usman, Muhammad
+//Developer: Usman, Muhammad | @AbuTalha63
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -98,5 +99,15 @@ public class T1_GPA{
 		assertEquals(expected, actual);
 	}
 	//---------------TODO: Letter grade input tests---------------//
+//	Ignore please :)
+//	@Test
+//	@DisplayName("F")
+//	public void t_GPA_F() {
+//		//Below 60 	F 	0.0
+//		GPACalculator.Score scoreResult = GPACalculator.calculateGrade(59.9F);
+//		String expected = 0.0;
+//		String actual = scoreResult.gpa();
+//		assertEquals(expected, actual);
+//	}
 
 }//End of class T1_GPA

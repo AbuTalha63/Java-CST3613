@@ -1,10 +1,10 @@
 package edu.cuny.citytech.cst.gpa;
+//Developer: Usman, Muhammad | @AbuTalha63
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-//Developer: Usman, Muhammad
 public class GPACalculator {
 	
 //	93-100% 	A 	4.0
