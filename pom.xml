@@ -7,9 +7,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<maven.compiler.release>17</maven.compiler.release>
+		<maven.compiler.release>19</maven.compiler.release>
 	</properties>
-
 
 	<dependencies>
 		<dependency>
@@ -18,15 +17,17 @@
 			<version>5.11.0-M2</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-params</artifactId>
 			<version>5.11.0</version>
 			<scope>test</scope>
 		</dependency>
-
-
+		<dependency>
+			<groupId>com.learning.java.data</groupId>
+			<artifactId>data-logic</artifactId>
+			<version>1.3</version>
+		</dependency>
 	</dependencies>
 
 </project>

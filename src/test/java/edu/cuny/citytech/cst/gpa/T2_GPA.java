@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class T2_GPA {	
@@ -59,5 +60,45 @@ public class T2_GPA {
 		float actualValue = oScore.gpa(); 
 	    assertEquals(expected, actualValue);
 	}
+	
+	@DisplayName("CSV file input test")
+	@ParameterizedTest
+	@CsvFileSource(resources = "/gpa.csv", numLinesToSkip = 1)
+	void t4(float score, String letterGrade, float expected) {
+		GPACalculator.Score oScore = GPACalculator.calculateGrade(score);
+		float actualValue = oScore.gpa();
+		assertEquals(expected, actualValue);
+	}
+}//end of T2_GPA java file
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
