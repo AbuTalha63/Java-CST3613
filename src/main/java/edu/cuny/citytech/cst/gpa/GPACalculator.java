@@ -31,7 +31,8 @@ public class GPACalculator {
 					new Score(83f, 86.9f, "B", 3.0f),
 					new Score(87f, 89.9f, "B+", 3.3f),
 					new Score(90f, 92.9f, "A-", 3.7f),
-					new Score(93f, 100f, "A", 4.0f)
+					new Score(93f, 100f, "A", 4.0f),
+					new Score(100.000f, 104f, "A+", 4.3f)
 				);
 		
 		Optional <Score> result = scoreTable.stream()

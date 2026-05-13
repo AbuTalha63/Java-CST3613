@@ -1,6 +1,7 @@
 package edu.cuny.citytech.cst.repository;
 //Developer: Usman, Muhammad | @AbuTalha63 on GitHub
 import java.util.List;
+import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +24,15 @@ public class T1_ETFRepository {
 	public void t2(){
 		var repository = new ETFRepository();
 		
-		List<ETF> list = repository.find(e -> e.getFrequency().equals("Monthly"));
+		Predicate<ETF> predicates = e -> e.getFrequency().equals("Monthly");
+		predicates = predicates.and( e -> e.getDividends().contains("A") || e.getDividends().contains("B") );
+		predicates = predicates.and( e -> !e.getDividends().contains("B-") );
+		predicates = predicates.and( e -> e.getYield() > 0.07 );
+		predicates = predicates.and( e -> e.getAumInBillions() > 1 );
+
+		
+		List<ETF> list = repository.find(predicates);
+		
 		
 		list.forEach(System.out::println);
 		System.out.println("Size: " + list.size() + "\nDeveloper: Usman, Muhammad");

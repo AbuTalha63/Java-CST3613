@@ -4,20 +4,22 @@ import java.util.Date;
 
 import com.learning.java.data.annotation.Column;
 
+import edu.cuny.citytech.cst.utility.CSTFunctions;
+
 public class ETF {
-	@Column(index = "0")  private int rank;
-	@Column(index = "1")  private String symbol;
-	@Column(index = "2")  private String fundName;
-	@Column(index = "3")  private float quantRating;
-	@Column(index = "4")  private float aum;
-	@Column(index = "5")  private String momentum;
-	@Column(index = "6")  private String expenses;
-	@Column(index = "7")  private String dividends;
-	@Column(index = "8")  private String risk;
-	@Column(index = "9")  private String liquidity;
-	@Column(index = "10") private Date payoutDate;
-	@Column(index = "11") private float yield;
-	@Column(index = "12") private String frequency;
+	@Column(index = "0")  protected int rank;
+	@Column(index = "1")  protected String symbol;
+	@Column(index = "2")  protected String fundName;
+	@Column(index = "3")  protected float quantRating;
+	@Column(index = "4")  protected float aum;
+	@Column(index = "5")  protected String momentum;
+	@Column(index = "6")  protected String expenses;
+	@Column(index = "7")  protected String dividends;
+	@Column(index = "8")  protected String risk;
+	@Column(index = "9")  protected String liquidity;
+	@Column(index = "10") protected Date payoutDate;
+	@Column(index = "11") protected float yield;
+	@Column(index = "12") protected String frequency;
 	public int getRank() {
 		return rank;
 	}
@@ -32,6 +34,9 @@ public class ETF {
 	}
 	public float getAum() {
 		return aum;
+	}
+	public float getAumInBillions() {
+		return aum / 1_000_000_000; 
 	}
 	public String getMomentum() {
 		return momentum;
@@ -57,11 +62,30 @@ public class ETF {
 	public String getFrequency() {
 		return frequency;
 	}
+	
+	
+	
 	@Override
 	public String toString() {
-		return "ETF [rank=" + rank + ", symbol=" + symbol + ", aum=" + aum + ", dividends=" + dividends
-				+ ", payoutDate=" + payoutDate + ", yield=" + yield + ", frequency=" + frequency + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("ETF [rank=");
+		builder.append(rank);
+		builder.append(", symbol=");
+		builder.append(symbol);
+		builder.append(", aum=");
+		builder.append(CSTFunctions.money.apply(aum));
+		builder.append(", dividends=");
+		builder.append(dividends);
+		builder.append(", payoutDate=");
+		builder.append(payoutDate);
+		builder.append(", yield=");
+		builder.append(yield);
+		builder.append(", frequency=");
+		builder.append(frequency);
+		builder.append("]");
+		return builder.toString();
 	}	
+	
 	
 	
 }
