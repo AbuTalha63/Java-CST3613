@@ -1,4 +1,5 @@
 package edu.cuny.citytech.cst.repository;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 //Developer: Usman, Muhammad | @AbuTalha63 on GitHub
 import java.util.List;
 import java.util.function.Predicate;
@@ -15,7 +16,9 @@ public class T1_ETFRepository {
 		
 		List<ETF> list = repository.findAll();
 		
-		list.forEach(System.out::println);
+//		list.forEach(System.out::println);
+		
+		assertTrue(list.size() > 1_500);
 		
 		
 	}

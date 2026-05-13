@@ -73,35 +73,20 @@ public class ETF {
 		builder.append(", symbol=");
 		builder.append(symbol);
 		builder.append(", aum=");
-		builder.append(CSTFunctions.money.apply(aum));
+		builder.append( CSTFunctions.money.apply(aum) );
 		builder.append(", dividends=");
 		builder.append(dividends);
-		builder.append(", payoutDate=");
-		builder.append(payoutDate);
+		builder.append(", liquidity=");
+		builder.append(liquidity);
 		builder.append(", yield=");
 		builder.append(yield);
 		builder.append(", frequency=");
 		builder.append(frequency);
 		builder.append("]");
 		return builder.toString();
-	}	
-	
-	
-	
+	}		
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
