@@ -5,10 +5,11 @@ import java.util.List;
 
 import edu.cuny.citytech.cst.dto.ETF;
 import edu.cuny.citytech.cst.dto.ETFPoints;
+import edu.cuny.citytech.cst.repository.ETFRepository;
 
 public class ETFService {
 	
-	private List<ETF> list = new ArrayList<>();
+	private List<ETF> list = new ETFRepository().findAll();
 	
 	public List<ETFPoints> getBestDividendstocks(){
 		
