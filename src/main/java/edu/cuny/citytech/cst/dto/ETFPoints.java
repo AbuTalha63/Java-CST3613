@@ -1,9 +1,7 @@
 package edu.cuny.citytech.cst.dto;
+//Developer: Usman, Muhammad | @AbuTalha63 on GitHub
 
 import static edu.cuny.citytech.cst.gpa.StocksLetterGrade.*;
-import edu.cuny.citytech.cst.utility.CSTFunctions;
-
-//Developer: Usman, Muhammad | @AbuTalha63 on GitHub
 
 public class ETFPoints extends ETF{
 
@@ -14,7 +12,7 @@ public class ETFPoints extends ETF{
 		
 	}
 	
-	//This will convert the values into a grade using the GPA code
+	//This will convert the values into a grade using the GPACalculator code
 	public float getExpensesScore() {
 		return getQPA(etf.expenses);
 	}
@@ -32,47 +30,44 @@ public class ETFPoints extends ETF{
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		
-		builder.append("ETFPoints [etf=");
-		builder.append(etf);
-		
-		builder.append(", rank=");
-		builder.append(rank);
+		builder.append("ETF [rank=");
+		builder.append(etf.rank);
 		
 		builder.append(", symbol=");
-		builder.append(symbol);
+		builder.append(etf.symbol);
 		
 		builder.append(", aum=");
-		builder.append( CSTFunctions.money.apply(etf.aum) );
+		builder.append(etf.aum);
 		
 		builder.append(", dividends=");
-		builder.append(dividends);
+		builder.append(etf.dividends);
 		builder.append(": ");
 		builder.append( this.getDividendScore() );
 		
 		builder.append(", liquidity=");
-		builder.append(liquidity);
+		builder.append(etf.liquidity);
 		builder.append(": ");
 		builder.append( this.getLiquidityScore() );
 		
 		builder.append(", risk=");
-		builder.append(risk);
+		builder.append(etf.risk);
 		builder.append(": ");
 		builder.append( this.getRiskScore() );
 		
 		builder.append(", expenses=");
-		builder.append(expenses);
+		builder.append(etf.expenses);
 		builder.append(": ");
 		builder.append( this.getExpensesScore() );
 		
 		builder.append(", yield=");
-		builder.append(yield);
+		builder.append(etf.yield);
 		
 		builder.append(", frequency=");
-		builder.append(frequency);
+		builder.append(etf.frequency);
 		
 		builder.append("]");
 		return builder.toString();
-		//code not working??? maybe not going to be used come back if need to be (vid 26)
+
 	}
 	
 

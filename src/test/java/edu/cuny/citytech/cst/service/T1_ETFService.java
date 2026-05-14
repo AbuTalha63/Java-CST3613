@@ -7,18 +7,18 @@ import org.junit.jupiter.api.Test;
 public class T1_ETFService {
 
 	@Test
-	@DisplayName("Selecting the right ETFs - should fail")
+	@DisplayName("Selecting the right ETFs")
 	public void t1() {
 		ETFService service = new ETFService();
 		
 		var list = service.getBestDividendstocks();
 		
 		list.forEach(System.out::println);
+		System.out.println("Developer: Usman, Muhammad | Row count: " + list.size());
+
 		
 		assertTrue(list.size() < 300 && list.size() > 20, "Error: not enough data: " + list.size());
 		
-		
-		
-		
+				
 	}
 }

@@ -26,7 +26,7 @@ public class StocksLetterGrade {
 		map.put("F",0f);
 	}
 	 public static float getQPA(String letterGrade) {
-		return map.getOrDefault(letterGrade, -999f);
+		return map.getOrDefault(letterGrade, -1f);
 	}
 
 }
