@@ -15,7 +15,7 @@ public class T1_ETFService {
 		
 		list.forEach(System.out::println);
 		
-		assertTrue(list.size() < 300 && list.size() > 20, "Error: not enough data");
+		assertTrue(list.size() < 300 && list.size() > 20, "Error: not enough data: " + list.size());
 		
 		
 		

@@ -12,7 +12,11 @@ public class ETFService {
 	
 	public List<ETFPoints> getBestDividendstocks(){
 		
-		return new ArrayList<>();
+		List<ETFPoints> listOfETFPoints = list.stream().map( ETFPoints::new ).toList(); 
+		//This function is taking in a values of etf and returning ETFPoints - what we need to get 
+		//the corresponding "Grade" values associated with each ETF based on GPACalculator class
+		
+		return listOfETFPoints;
 		
 	}
 	
