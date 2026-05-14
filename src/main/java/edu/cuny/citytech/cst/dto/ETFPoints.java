@@ -1,6 +1,6 @@
 package edu.cuny.citytech.cst.dto;
 
-import edu.cuny.citytech.cst.gpa.GPACalculator;
+import static edu.cuny.citytech.cst.gpa.StocksLetterGrade.*;
 import edu.cuny.citytech.cst.utility.CSTFunctions;
 
 //Developer: Usman, Muhammad | @AbuTalha63 on GitHub
@@ -16,16 +16,16 @@ public class ETFPoints extends ETF{
 	
 	//This will convert the values into a grade using the GPA code
 	public float getExpensesScore() {
-		return GPACalculator.getQPA(etf.expenses);
+		return getQPA(etf.expenses);
 	}
 	public float getDividendScore() {
-		return GPACalculator.getQPA(etf.dividends);
+		return getQPA(etf.dividends);
 	}
 	public float getRiskScore() {
-		return GPACalculator.getQPA(etf.risk);
+		return getQPA(etf.risk);
 	}
 	public float getLiquidityScore() {
-		return GPACalculator.getQPA(etf.liquidity);
+		return getQPA(etf.liquidity);
 	}
 	
 	@Override
